@@ -1,0 +1,13 @@
+Package: slidingwindow
+Title: An algorithm used on sequential data to smoothen it
+Version: 0.0.0.1
+Authors@R: 
+    person("Xiaoyang", "Du", , "xiaoyang.du@ki.se", role = c("aut", "cre"))
+Description:  An algorithm used on sequential data to smoothen it by first adding 
+              together series with a high increase and then taking the min value 
+              over a certain range.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.0
