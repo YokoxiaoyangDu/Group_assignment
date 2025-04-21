@@ -57,7 +57,7 @@ window_loop <- function(data, window_size, window_function, ...) {
 
   for (i in 1:(n - window_size + 1)) {
     window <- data$acceleration[i:(i + window_size - 1)]
-    result[i + window_size - 1] <- window_fun(window, ...)
+    result[i + window_size - 1] <- window_function(window, ...)
   }
 
   data$result <- result
