@@ -71,19 +71,19 @@ window_loop <- function(data, window_size, window_function, ...) {
 #' @param use_binary show binary results
 #' @return a data frame
 #' @export
-plot_accelaration <- function(data) {
+
+plot_accelaration <- function(data, plot_mean = FALSE, plot_binary = FALSE) {
   p <- ggplot2::ggplot(data, ggplot2::aes(x = time)) +
     ggplot2::geom_line(ggplot2::aes(y = acceleration), color = "blue") +
     ggplot2::labs(x = "Time", y = "Acceleration")
 
-  if ("mean" %in% names(data)) {
+  if (plot_mean && "mean" %in% colnames(data)) {
     p <- p + ggplot2::geom_line(ggplot2::aes(y = mean), color = "green")
   }
 
-  if ("binary" %in% names(data)) {
+  if (plot_binary && "binary" %in% colnames(data)) {
     p <- p + ggplot2::geom_line(ggplot2::aes(y = binary), color = "red")
   }
 
   return(p)
 }
-
