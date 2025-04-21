@@ -9,7 +9,6 @@ read_data_frame <- function(file_path) {
   return(temp)
 }
 
-data_acceleration<- read_data_frame("C:/Users/xiaodu/Downloads/Example_window.csv")
 
 #' Calculate Euclidean norm
 #' @param data dataset
