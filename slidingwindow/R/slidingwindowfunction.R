@@ -81,5 +81,3 @@ plot_accelaration <- function(data,use_mean = TRUE,use_binary = TRUE) {
 
   return(figure)
 }
-
-devtools::document()
